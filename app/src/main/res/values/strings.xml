@@ -14,7 +14,7 @@
     <string name="button_reset">Reset</string>
     <string name="register_form">Registration</string>
 
-    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="course_edit_text">Course</string>
     <string name="button_register">Register</string>
     <string name="button_back">Back</string>
 
