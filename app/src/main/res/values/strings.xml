@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Login Page</string>
+    <string name="app_name2">Add Student</string>
+    <string name="hint_username">Username</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="course">Course</string>
+    <string name="section">Section</string>
+    <string name="department">Department</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">LOGIN</string>
+    <string name="button_add">Add Student</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="button_reset">Reset</string>
+    <string name="register_form">Registration</string>
+
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="button_register">Register</string>
+    <string name="button_back">Back</string>
+
+
+</resources>
