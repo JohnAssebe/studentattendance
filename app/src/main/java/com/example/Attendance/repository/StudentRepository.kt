@@ -1,7 +1,6 @@
 package com.example.Attendance.repository
 
 import com.example.Attendance.data.Student
-import com.example.Attendance.data.StudentEmbedded
 import com.example.Attendance.webservice.StudentService
 import kotlinx.coroutines.Deferred
 import retrofit2.Response

@@ -91,7 +91,7 @@
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
-
+                    android:id="@+id/attendance_card_view"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
 

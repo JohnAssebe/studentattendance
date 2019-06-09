@@ -21,6 +21,9 @@ class HomeForTeacher : Fragment() {
 
 
         }
+        view.attendance_card_view.setOnClickListener{
+            (activity as NavigationHost).navigateTo(AllStudentRecycler(), false)
+        }
 
 
         return view

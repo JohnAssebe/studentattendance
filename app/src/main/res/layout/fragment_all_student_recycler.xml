@@ -1,13 +1,41 @@
 <LinearLayout
+        android:orientation="vertical"
             xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              tools:context="com.example.Attendance.AllStudentRecycler">
-
-
+    <com.google.android.material.card.MaterialCardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="1dp"
+            app:cardBackgroundColor="?attr/colorPrimaryVariant"
+            app:cardCornerRadius="4dp">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:padding="5dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/cardview_light_background"
+            android:text="All Students"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceBody1"
+    /></com.google.android.material.card.MaterialCardView>
     <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="wrap_content"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_attendance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Attendance" />
+
 </LinearLayout>
