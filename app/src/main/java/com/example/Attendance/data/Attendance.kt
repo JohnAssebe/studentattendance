@@ -1,4 +1,8 @@
 package com.example.Attendance.data
 
-class Attendance {
-}
+data class Attendance(
+val FirstName:String,
+val LastName:String,
+val status:Boolean,
+val date:String
+)
