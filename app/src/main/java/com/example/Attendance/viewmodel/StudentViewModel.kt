@@ -1,5 +1,4 @@
 package com.example.Attendance.viewmodel
-
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
@@ -45,4 +44,29 @@ class StudentViewModel(application: Application): AndroidViewModel(application) 
 
         }
     }
+
+    fun getStudentByCourseId(id: Int): LiveData<Student> {
+        val student: MutableLiveData<Student> = MutableLiveData()
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val response: Response<Student> = studentRepository.getStudentByCourseId(id).await()
+            val responseBody = response.body()
+            if(responseBody != null) {
+                withContext(Dispatchers.Main) {
+                    student.value = responseBody
+                }
+            }
+
+        }
+
+        return student
+    }
+
+    fun deleteStudent(id: Int) {
+        viewModelScope.launch(Dispatchers.IO) {
+            val response: Response<Void> = studentRepository.DeleteStudentById(id).await()
+            Log.d("Deleted succesfully", response.message())
+        }
+    }
+
 }

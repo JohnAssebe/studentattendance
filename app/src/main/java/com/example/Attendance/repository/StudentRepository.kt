@@ -12,4 +12,10 @@ class StudentRepository(private val studentService: StudentService) {
     fun getAllStudentsAsync(): Deferred<Response<List<Student>>> {
         return studentService.getStudents()
     }
+    fun getStudentByCourseId(id:Int): Deferred<Response<Student>> {
+        return studentService.getStudentByCourseId(id)
+    }
+    fun DeleteStudentById(id:Int): Deferred<Response<Void>>{
+        return studentService.deleteStudentById(id)
+    }
 }

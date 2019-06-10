@@ -7,4 +7,8 @@ class TeacherRepository (private val teacherService: TeacherService){
     fun addTeacherAsync(teacher:Teacher): Deferred<Response<Void>> {
         return teacherService.createTeachersAsync(teacher)
     }
+//    fun checkValidity(teacher:Teacher): Deferred<Response<Void>> {
+//        return teacherService.CheckLogin(teacher)
+//
+//    }
 }

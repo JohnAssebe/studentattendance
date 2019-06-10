@@ -6,4 +6,6 @@ import retrofit2.http.*
 interface TeacherService {
     @POST("/stddb/teacher")
     fun createTeachersAsync(@Body newTeacher: Teacher): Deferred<Response<Void>>
+    @POST("/stddb/teacher/login")
+    fun CheckLogin(@Body loginTrial:Teacher): Deferred<Response<Void>>
 }

@@ -1,7 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             tools:context=".HomeForTeacher">
 
@@ -30,14 +30,9 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="55dp"
                     android:text="Manage Your Students"
-                    android:textColor="#03A9F4"
+                    android:textColor="@color/toolbarIconColor"
                     android:textSize="23sp"
                     android:textStyle="bold"/>
-            <!--<com.mikhaellopez.circularimageview.CircularImageView-->
-                    <!--android:layout_width="120dp"-->
-                    <!--android:layout_height="120dp"-->
-                    <!--android:layout_alignParentRight="true"-->
-                    <!--android:src="@drawable/jo4" />-->
         </RelativeLayout>
 
         <GridLayout

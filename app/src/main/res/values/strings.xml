@@ -8,7 +8,7 @@
     <string name="section">Section</string>
     <string name="department">Department</string>
     <string name="hint_password">Password</string>
-    <string name="button_login">LOGIN</string>
+    <string name="button_login">Login</string>
     <string name="button_add">Add Student</string>
     <string name="button_cancel">CANCEL</string>
     <string name="button_reset">Reset</string>
