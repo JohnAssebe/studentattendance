@@ -33,13 +33,11 @@ class RegisterFragment: Fragment() {
         val activity = activity as MainActivity?
         val isConnected = activity?.connected()
 
-        /////
         userNameEditText = view.register_username_edit_text
-
         passwordEditText = view.register_password_edit_text
         courseEditText = view.course_edit_text
 
-        /////
+
 
 
         view.back_button.setOnClickListener {

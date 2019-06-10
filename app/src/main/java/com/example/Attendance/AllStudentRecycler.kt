@@ -23,12 +23,18 @@ import kotlinx.android.synthetic.main.fragment_all_student_recycler.view.*
 
 class AllStudentRecycler : Fragment() {
     private lateinit var studentViewModel: StudentViewModel
+    private lateinit var attendanceViewModel: AttendanceViewModel
     private lateinit var recyclerView: RecyclerView
+//    private lateinit var FirstName:TextView
+//    private lateinit var LastName:TextView
+//    private lateinit var Status:CheckBox
+//    private lateinit var date:String
     //private lateinit var students: List<Student>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         studentViewModel = ViewModelProviders.of(this).get(StudentViewModel::class.java)
+        attendanceViewModel=ViewModelProviders.of(this).get(AttendanceViewModel::class.java)
 
 
     }
@@ -42,14 +48,24 @@ class AllStudentRecycler : Fragment() {
        val view=inflater.inflate(R.layout.fragment_all_student_recycler, container, false)
         //val activity = activity as MainActivity?
         //val isConnected = activity?.connected()
+//        FirstName=view.student_first_name
+//        LastName=view.student_last_name
+//        Status=view.check_box_present
+
         recyclerView = view.recycler_view
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.setHasFixedSize(true)
         studentViewModel.getAllStudents().observe(this, Observer{
 
-            recyclerView.adapter=StudentRecyclerAdapter(it)
+            recyclerView.adapter=StudentRecyclerAdapter(it,attendanceViewModel)
         })
-
+//        ,{Attendance(
+//
+//            FirstName.text.toString(),
+//            LastName.text.toString(),
+//            Status.isChecked,
+//            date
+//        )}
 //        studentFirstName=view.student_first_name.toString()
 //        studentLastName=view.student_last_name.toString()
 //        studentStatus=view.check_box_present.isSelected
@@ -70,9 +86,9 @@ class AllStudentRecycler : Fragment() {
     }
 //    private fun readFields() = Attendance(
 //
-//        studentFirstName,
-//        studentLastName,
-//        studentStatus,
+//        FirstName.text.toString(),
+//        LastName.text.toString(),
+//        Status.isChecked,
 //        date
 //    )
 
