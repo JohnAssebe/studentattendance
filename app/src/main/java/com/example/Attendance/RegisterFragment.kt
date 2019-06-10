@@ -35,7 +35,7 @@ class RegisterFragment: Fragment() {
 
         userNameEditText = view.register_username_edit_text
         passwordEditText = view.register_password_edit_text
-        courseEditText = view.course_edit_text
+        courseEditText = view.course
 
 
 

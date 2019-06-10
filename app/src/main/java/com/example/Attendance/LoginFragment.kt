@@ -23,7 +23,7 @@ class LoginFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.login_fragment, container, false)
         val activity = activity as MainActivity?
-        username=view.user_name
+        username=view.user_name_edit_text
         password=view.password_edit_text
         view.login_button.setOnClickListener {
            teacherViewModel.AllTeachers().observe(this, Observer {

@@ -7,6 +7,7 @@ package com.example.Attendance.webservice
 
         companion object {
             private val retrofit = Retrofit.Builder()
+                    //this is for Nox player Emulator
                 .baseUrl("http://172.17.100.2:5000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(CoroutineCallAdapterFactory())
