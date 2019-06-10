@@ -6,19 +6,28 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.Attendance.data.Student
+import com.example.Attendance.data.StudentRoomDatabase
 import com.example.Attendance.repository.StudentRepository
+import com.example.Attendance.repository.StudentRoomRepository
 import com.example.Attendance.webservice.ServiceBuilder
 import com.example.Attendance.webservice.StudentService
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
 import retrofit2.Response
 class StudentViewModel(application: Application): AndroidViewModel(application) {
     private val studentRepository:StudentRepository
+//    private val studentRoomRepository:StudentRoomRepository
     init{
         val studentService= ServiceBuilder.buildService(StudentService::class.java)
         studentRepository= StudentRepository(studentService)
+        //for room database repository
+       //couroutine for suspending execution for 6 sec
+    GlobalScope.launch{
+        delay(6000L)
+        val studentDao = StudentRoomDatabase.getDatabase(application).studentDao()
+        val studentRoomRepository = StudentRoomRepository(studentDao)
+
     }
+  }
     fun getAllStudents(): LiveData<List<Student>> {
         val allStudents: MutableLiveData<List<Student>> = MutableLiveData()
         viewModelScope.launch(Dispatchers.IO) {
