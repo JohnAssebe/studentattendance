@@ -1,7 +1,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/home_fragment"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             tools:context=".HomeForTeacher">
 
@@ -23,16 +24,21 @@
                     android:layout_marginTop="20dp"
                     android:text="Home"
                     android:textColor="#FFFFFF"
-                    android:textSize="25dp" />
+                    android:textSize="20dp"/>
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="55dp"
-                    android:text="Manage Your Students"
-                    android:textColor="@color/toolbarIconColor"
-                    android:textSize="23sp"
+                    android:text="Navigaion Options"
+                    android:textColor="#03A9F4"
+                    android:textSize="15dp"
                     android:textStyle="bold"/>
+            <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/jo4" />
         </RelativeLayout>
 
         <GridLayout
@@ -46,14 +52,17 @@
                 android:rowCount="3">
 
             <androidx.cardview.widget.CardView
+                    android:id="@+id/student_card_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="12dp"
                     app:cardCornerRadius="12dp"
-                    android:id="@+id/student_card_view">
-                app:cardElevation="6dp">
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
+                   app:cardElevation="6dp">
 
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -63,7 +72,6 @@
                         android:padding="16dp">
 
                     <ImageView
-                            android:id="@+id/student_image"
                             android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/studentlogin" />
@@ -72,21 +80,23 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Add Student Info"
+                            android:text="Student"
                             android:textColor="#6f6f6f"
-                            android:textSize="18sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="12dp"
                     android:id="@+id/attendance_card_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
 
@@ -100,15 +110,15 @@
                     <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/images" />
+                            android:src="@drawable/attendane4" />
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Take Attendance"
+                            android:text="Attendance"
                             android:textColor="#6f6f6f"
-                            android:textSize="18sp"
+                            android:textSize="15dp"
                             android:textStyle="bold" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -118,7 +128,10 @@
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_margin="12dp"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
 
@@ -132,13 +145,13 @@
                     <ImageView
                             android:layout_width="80dp"
                             android:layout_height="80dp"
-                            android:src="@drawable/course" />
+                            android:src="@drawable/attendance" />
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="View Attendance"
+                            android:text="View"
                             android:textColor="#6f6f6f"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -150,6 +163,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
 
@@ -172,7 +189,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:text="Generate Report"
+                            android:text="Report"
                             android:textColor="#6f6f6f"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -184,6 +201,10 @@
                     android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_margin="12dp"
                     app:cardCornerRadius="12dp"
                     app:cardElevation="6dp">
@@ -196,7 +217,7 @@
                         android:padding="16dp">
 
                     <ImageView
-                            android:layout_width="140dp"
+                            android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/about" />
 
@@ -215,6 +236,10 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="23dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
                     android:layout_margin="12dp"
@@ -230,7 +255,7 @@
                         android:padding="16dp">
 
                     <ImageView
-                            android:layout_width="140dp"
+                            android:layout_width="80dp"
                             android:layout_height="80dp"
                             android:src="@drawable/logout" />
 

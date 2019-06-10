@@ -1,4 +1,5 @@
 <resources>
+    <string name="student_name">FirstName</string>
     <string name="app_name">Login Page</string>
     <string name="app_name2">Add Student</string>
     <string name="hint_username">Username</string>
@@ -8,13 +9,20 @@
     <string name="section">Section</string>
     <string name="department">Department</string>
     <string name="hint_password">Password</string>
-    <string name="button_login">Login</string>
+    <string name="button_login">LOGIN</string>
     <string name="button_add">Add Student</string>
     <string name="button_cancel">CANCEL</string>
     <string name="button_reset">Reset</string>
     <string name="register_form">Registration</string>
-    <string name="student_name">First Name</string>
-    <string name="course_edit_text">Course</string>
+    <string-array name="courses">
+        <item>Advanced Programming</item>
+        <item>Operating System</item>
+        <item>Human Interaction</item>
+        <item>Software Engineering 2</item>
+        <item>Computer Architecture</item>
+    </string-array>
+
+    <string name="hint_confirm_password">Confirm Password</string>
     <string name="button_register">Register</string>
     <string name="button_back">Back</string>
 
@@ -22,4 +30,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
+    <string name="user_name_edit_text">user_name</string>
 </resources>

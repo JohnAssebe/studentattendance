@@ -3,8 +3,9 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
+            android:id="@+id/login_fragment"
             android:layout_height="match_parent"
-            android:background="@color/cardview_dark_background"
+            android:background="@drawable/login"
             tools:context=".LoginFragment">
 
     <LinearLayout
@@ -16,26 +17,6 @@
             android:padding="24dp"
             android:paddingTop="16dp">
 
-        <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="64dp"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:layout_marginTop="48dp"-->
-                <!--android:layout_marginBottom="16dp"-->
-                <!--android:text="Attendance"-->
-                <!--android:textAllCaps="true"-->
-                <!--android:textSize="30sp" />-->
-
-        <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_gravity="center_horizontal"-->
-                <!--android:layout_marginBottom="70dp"-->
-                <!--android:text="@string/app_name"-->
-                <!--android:textColor="#FD9725"-->
-                <!--android:textAllCaps="true"-->
-                <!--android:textSize="35sp"-->
-                <!--/>-->
 
         <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -43,9 +24,11 @@
                 android:hint="@string/hint_username">
 
             <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/user_name"
                     android:layout_width="match_parent"
+                    android:id="@+id/user_name_edit_text"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="100dp"
                     android:inputType="text"
                     android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -71,6 +54,7 @@
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/login_button"
                     android:layout_width="wrap_content"
+                    app:cornerRadius="10dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
@@ -79,6 +63,7 @@
             <com.google.android.material.button.MaterialButton
                     android:id="@+id/cancel_button"
                     android:layout_width="wrap_content"
+                    app:cornerRadius="10dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="12dp"
                     android:layout_marginRight="12dp"
@@ -86,6 +71,24 @@
                     android:layout_toLeftOf="@id/login_button"
                     android:text="@string/button_cancel" />
 
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textSize="30dp"
+                      android:layout_below="@+id/error_message"
+                      android:textColor="#8B0101"
+                      android:id="@+id/textview_for_login_success"
+            />
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text=""
+                      android:textSize="30dp"
+                      android:textColor="#8B0101"
+                      android:id="@+id/error_message"
+            />
         </RelativeLayout>
 
     </LinearLayout>
