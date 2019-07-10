@@ -24,6 +24,7 @@ import kotlinx.android.synthetic.main.fragment_all_student_recycler.view.*
 class AllStudentRecycler : Fragment() {
     private lateinit var studentViewModel: StudentViewModel
     private lateinit var attendanceViewModel: AttendanceViewModel
+    private lateinit var studentViewModelCachedViewModel:StudentRoomViewModel
     private lateinit var recyclerView: RecyclerView
 //    private lateinit var FirstName:TextView
 //    private lateinit var LastName:TextView
@@ -57,7 +58,7 @@ class AllStudentRecycler : Fragment() {
         recyclerView.setHasFixedSize(true)
         studentViewModel.getAllStudents().observe(this, Observer{
 
-            recyclerView.adapter=StudentRecyclerAdapter(it,attendanceViewModel)
+            recyclerView.adapter=StudentRecyclerAdapter(it,attendanceViewModel,studentViewModelCachedViewModel)
         })
 //        ,{Attendance(
 //
